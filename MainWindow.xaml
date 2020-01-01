@@ -1,0 +1,202 @@
+﻿<Window x:Class="Flames_Layout2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Flames_Layout2"
+        
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+            <MediaElement 
+            Source="../../Images/gif/flamescalc.gif"
+            x:Name="FlamesCalcGif"
+            Grid.Column="1" 
+            Grid.Row="1" 
+            Grid.ColumnSpan="4"
+            MediaEnded="MediaElement_MediaEnded"
+            LoadedBehavior="Play"
+            Height="40"
+            Margin="0,0,0,8"
+                          
+            />
+
+        <TextBlock
+            Grid.Column="1"
+            Grid.Row="2" 
+            Text="Name1: "
+            FontWeight="Bold"
+            FontSize="15"
+                    >
+        </TextBlock>
+        <TextBox         
+            x:Name="TxtBoxName1" 
+            CharacterCasing="Upper"
+            Grid.Column="2"
+            Grid.Row="2"
+            Width="150"
+            Margin="0,0,0,10" 
+            TextChanged="TxtBoxName1_TextChanged"
+            PreviewTextInput="TxtBoxName1_previewTextInput"
+                >
+
+        </TextBox>
+        <TextBlock
+            Grid.Column="1"
+            Grid.Row="3" 
+            Text="Name2: "
+            FontWeight="Bold"
+            FontSize="15"
+                   >
+        </TextBlock>
+        <TextBox 
+            x:Name="TxtBoxName2"
+            CharacterCasing="Upper"
+            Grid.Column="2"
+            Grid.Row="3"
+            Width="150" 
+            TextChanged="TxtBoxName2_TextChanged"
+            PreviewTextInput="TxtBoxName2_previewTextInput"
+                 >
+        </TextBox>
+        <Button
+            x:Name="CalcBtn"
+            Content="Calculate"
+            Grid.Column="2" 
+            Grid.Row="4" 
+            Margin="0,15,0,0"
+            Width="80"
+            Height="35"
+            Click="CalcBtn_Click"
+               >
+
+        </Button>
+        <Button 
+            x:Name="ResetBtn"
+            Content="Reset"
+            Grid.Column="2" 
+            Grid.Row="5" 
+            Margin="0,15,0,0"
+            Width="70"
+            Height="35"
+            Click="ResetBtn_Click"
+               >
+        </Button>
+        <TextBlock 
+           Text="Calculation Information"           
+           Grid.Column="2"  
+           Grid.ColumnSpan="1"
+           Margin="0,15,0,0"  
+           Grid.Row="6"  
+            />
+        <TextBlock 
+           x:Name="MatchedTxtBox"
+           Text=""           
+           Grid.Column="2" 
+           Grid.ColumnSpan="1"
+           Margin="0,15,0,0"  
+           Grid.Row="7"  
+            />
+        <TextBlock
+            Grid.Column="1"
+            Grid.Row="8" 
+            Text="Name1: "
+            Margin="0,15,0,0"       
+            FontSize="10" 
+                   />
+        <TextBlock x:Name="CalcInfoName1"
+            Grid.Column="2"              
+            Grid.Row="8"  
+            Grid.ColumnSpan="1"
+            Width="150"
+            FontWeight="Bold"
+            Grid.RowSpan="1"
+            Margin="0,15,0,0"       
+            FontSize="12" 
+                              
+            />
+        <TextBlock
+            Grid.Column="1"
+            Grid.Row="9" 
+            Text="Name2: "         
+            FontSize="10"
+            Margin="0,15,0,0"       
+
+                   />
+        <TextBlock x:Name="CalcInfoName2"
+            Grid.Column="2"              
+            Grid.Row="9"  
+            Grid.ColumnSpan="1"
+            Grid.RowSpan="1"
+            Margin="0,15,0,0"     
+            FontWeight="Bold"
+            Width="150"
+            FontSize="12" 
+                              
+            />
+        <TextBlock x:Name="TotalMrchLetters"
+            Grid.Column="2"              
+            Grid.Row="10"  
+            Grid.RowSpan="1"
+            Grid.ColumnSpan="1"
+            Margin="0,15,0,0"   
+            FontWeight="Bold"
+            TextAlignment="Center"
+            FontSize="13" 
+                              
+            />
+
+        <TextBlock x:Name="TextBlkShowRes"
+            Grid.Column="5"
+            Grid.ColumnSpan="1"       
+            Grid.Row="1"            
+            Margin="12,15,12,0"       
+            TextAlignment="Center" 
+            FontFamily="Comic Sans MS"                               
+            />
+
+        <MediaElement
+             x:Name="ImageStatus"
+             MediaEnded="MediaElement_MediaEnded"
+             LoadedBehavior="Play"
+             Source="../../Images/gif/default.gif"
+             Grid.Row="2"
+             Grid.Column="5"
+             Grid.RowSpan="10"
+             Grid.ColumnSpan="1"    
+             Margin="60,5,10,30"  
+            >
+        </MediaElement>
+
+    </Grid>
+
+</Window>
